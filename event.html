@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+    <script src="event.js" defer></script>  
+</head>
+<body>
+
+    <div class="header">
+        <h1>Events</h1>
+        <p>Make your wedding special</p>
+      </div>
+      
+      <div class="navbar">
+        <a href="home.html" >Bride Dress</a>
+        <a href="groom.html">Groom Suits</a>
+        <a href="acce.html">Accecories</a>
+        <a href="" class="active" >Events</a>
+      </div>
+
+  
+<!-- MAIN (Center website) -->
+<div class="main">
+
+    <h1>Beautiful Design for your wedding </h1>
+    <hr>
+    
+    <h2>PORTFOLIO</h2>
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show All</button>
+      <button class="btn" onclick="filterSelection('cake')"> Cakes</button>
+      <button class="btn" onclick="filterSelection('decor')"> Decoration</button>
+      <button class="btn" onclick="filterSelection('design')"> Design</button>
+      
+    </div>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column cake">
+        <div class="content">
+          <img src="c1.jpg" alt="Mountains" style="width:100%">
+     
+        </div>
+      </div>
+      <div class="column cake">
+        <div class="content">
+        <img src="c2.jpg" alt="Lights" style="width:100%">
+      
+        </div>
+      </div>
+      <div class="column cake">
+        <div class="content">
+        <img src="c3.jpg" alt="Nature" style="width:100%">
+        
+        </div>
+      </div>
+      <div class="column cake">
+        <div class="content">
+        <img src="c4.png" alt="Nature" style="width:100%">
+       
+        </div>
+      </div>
+    
+        <div class="column decor">
+          <div class="content">
+            <img src="l1.jpg" alt="Mountains" style="width:100%">
+       
+          </div>
+        </div>
+        <div class="column decor">
+          <div class="content">
+          <img src="l2.jpg" alt="Lights" style="width:100%">
+        
+          </div>
+        </div>
+        <div class="column decor">
+          <div class="content">
+          <img src="l3.jpg" alt="Nature" style="width:100%">
+          
+          </div>
+        </div>
+        <div class="column decor">
+          <div class="content">
+          <img src="l4.jpg" alt="Nature" style="width:100%">
+         
+          </div>
+        </div>
+            <div class="column design">
+              <div class="content">
+                <img src="d1.jpg" alt="Mountains" style="width:100%">
+           
+              </div>
+            </div>
+            <div class="column design">
+              <div class="content">
+              <img src="d2.jpg" alt="Lights" style="width:100%">
+            
+              </div>
+            </div>
+            <div class="column design">
+              <div class="content">
+              <img src="d3.jpg" alt="Nature" style="width:100%">
+              
+              </div>
+            </div>
+            <div class="column design">
+              <div class="content">
+              <img src="d4.jpg" alt="Nature" style="width:100%">
+             
+              </div>
+            </div>
+
+      </div>
+
+
+
+      </div>
+    <!-- END GRID -->
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
+  
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+      
+</body>
+</html>
