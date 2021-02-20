@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="groom.css">
-    <title>Wedding</title>
+    <link rel="shortcut icon" type="image/x-icon" href="mybigday.JPG" />
+    <title>Groom Suits</title>
     <script src="home.js" defer></script>     
     </head>
     <body>
     
     
+      <img src="play.png" id="icon">
+
+      <audio id="mySong">
+      <source src="all_of_me.mp3" type="audio/mp3">
+      </audio>
+      
+        <img src="top.png" onclick="topFunction()" id="myBtn" title="Go to top">
+
+        
       <div class="header">
         <h1>Groom Needs </h1>
         <p>Everything's groom needs. </p>
@@ -19,12 +30,40 @@
       <div class="navbar">
         <a href="home.html" >Bride Dress</a>
         <a href="" class="active">Groom Suits</a>
-        <a href="acce.html">Accecories</a>
+        <a href="acce.html">Bride Accecories</a>
         <a href="event.html" >Events</a>
-      </div>
-    
-      
-      
+        <a onclick="openNav()" >Category</a>
+        <a onclick="openSearch()">Search</a>
+  </div>
+
+
+  <div id="myOverlay" class="search">
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    <div class="search-content">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+
+ 
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="photographer.html">Photographer</a>
+    <a href="djs.html">DJs</a>
+    <a href="womensalon.html">Women's Hair Salons</a>
+    <a href="mensalon.html">Men's Hair Salons</a>
+    <a href="nailsalon.html">Nails Saloons</a>
+    <a href="partyplanner.html">Party Planners</a>
+    <a href="groomstore.html">Groom Suits Store</a>
+    <a href="bridalstore.html">Bridal Dresses Store</a>
+    <a href="bridalcos.html">Bridal Cosmetics</a>
+    <a href="cardecoration.html">Car Decoration Store</a>
+    <a href="carrental.html">Car Rental Store</a>
+  </div>
+</div>
 
 
 <div class="container">
@@ -34,7 +73,7 @@
       <h1 class="large-font" style="color:MediumSeaGreen;"><b>Groom Suits</b></h1>
       <p><span style="font-size:36px"> A wide range of men's wedding suits.</span>We offer a wide range of weddings suits for men to give you the opportunity to find the best suit for weddings. Welcome to a new way to find the right outfit for your special occasions.</p>
      
-      <a href="gsuit.html" class="button" >Show Suits</a>
+      <a href="gsuit.html" class="button" ><span>Show Suits </span> </a>
       
     </div>
     <div class="column-33">
@@ -56,7 +95,7 @@
       <h1 class="large-font" style="color:red;"><b>Groom Shoes</b></h1>
       <p><span style="font-size:24px">A wide range of men's wedding shoes.</span> 
         The most important elements to shine are the suit, the shirt, the accessories, and obviously, the ceremony shoes for men. Although the number of options we have is somewhat more limited compared to our partner, we have many. And following a few simple recommendations, we can feel the most elegant in the world. Some aspects that we have to take into account to wear perfect wedding shoes for grooms:</p>
-      <a  href="gshoes.html"  class="button" style="background-color:red" >Show Shoes</a>
+      <a  href="gshoes.html"  class="button" style="background-color:red" > <span>Show Shoes</span> </a>
   
     </div>
   </div>
@@ -69,7 +108,7 @@
       
       <h1 class="large-font" style="color:MediumSeaGreen;"><b>Groom Accecories</b></h1>
       <p><span style="font-size:36px">A wide range of men's wedding accecories.</span> Everyone wants to look their best at weddings. Whether you’re the groom, best man, or a guest seeking to impress. Find your perfect wedding suit in our vast selection of wedding suits for men today.</p>
-      <a href="gacc.html" class="button" >Show Accecories</a>
+      <a href="gacc.html" class="button" >  <span>Show Accecories </span> </a>
     </div>
     <div class="column-33">
         <img src="a1.jpg" width="335" height="471" >
@@ -79,6 +118,134 @@
 
 
 
+
+<footer class="footer-web">
+  <div class="footer-content">
+      <div class="footer-box">
+          <div class="footer-item">
+              <h3>Products</h3>
+              <ul>
+                  <li><a target="_blank" href="/idoc">Mockplus Cloud</a></li>
+                  <li><a target="_blank" href="/download/mockplus-classic">Mockplus Classic</a></li>
+                  <li><a target="_blank" href="/mockplus-ds">Mockplus DS</a></li>
+                  <li><a target="_blank" href="/mockplus-rp">Mockplus RP</a></li>
+                  <li><a href="/enterprise">Mockplus Enterprise</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Use Cases</h3>
+              <ul>
+                  <li><a href="/free-wireframing-tool?hmsr=freewireframingtool" target="_blank">Free wireframe tool</a></li>
+                  <li><a href="/web-prototyping-tool?hmsr=webprototypingtool" target="_blank">Web prototyping</a></li>
+                  <li><a href="/app-prototyping-tool?hmsr=appprototypingtool" target="_blank">APP prototyping</a></li>
+                  <li><a href="/remote-design-collaboration?hmsr=remotedesigncollaboration" target="_blank">Remote collaboration</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Learn</h3>
+              <ul>
+                  <li><a href="https://help.mockplus.com/p/465" target="_blank">Start prototyping</a></li>
+                  <li><a href="https://help.mockplus.com/p/235" target="_blank">Design handoff</a></li>
+                  <li><a href="https://help.mockplus.com/p/247" target="_blank">Integration guide</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Resource</h3>
+              <ul class="contact">
+                  <li><a href="/product/releaseNotes">New releases</a></li>
+                  <li><a href="/features">All features</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/resource">Free materials</a></li>
+                  <li><a href="https://help.mockplus.com/p/96">Samples</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Support</h3>
+              <ul>
+                  <li><a href="aboutus.html">About us</a></li>
+                  <li><a href="contactus.html">Contact us</a></li>
+                  
+              </ul>
+          </div>
+          <div class="footer-item">
+              <div class="footer-logo">
+                  <a href="/?home=1">
+                      <i class="iconfont icon_logo"></i>
+                      &nbsp;Mockplus</a>
+              </div>
+              <p><a href="mailto: support@jongde.com" target="_blank">support@jongde.com</a></p>
+              <p class="footer-icon">
+                <span>
+                 <a href="https://www.facebook.com/Mockplus-208416746176601/facebook" target="_blank">
+                    <i class="iconfont facebook"></i>
+                  </a>
+                </span>
+                  <span>
+                  <a href="https://twitter.com/Mockplus" target="_blank">
+                    <i class="iconfont icon_Twitter"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="https://www.linkedin.com/company/mockplus" target="_blank">
+                    <i class="iconfont icon_LinkedIn"></i>
+                  </a>
+                </span>
+              </p>
+          </div>
+      </div>
+      <div class="footer-foot">
+          <p class="foot-first">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/tos">User Agreement</a>
+          </p>
+          <p class="foot-last">© 2014-2021 Mockplus Software Co.,Ltd. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+
+
+
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+
+
+  var mySong = document.getElementById("mySong");
+var icon = document.getElementById("icon");
+
+icon.onclick= function(){
+
+if(mySong.paused){
+
+  mySong.play();
+ 
+  icon.src="pausse.png";
+}
+else
+{
+  mySong.pause();
+  icon.src="play.png";
+}}
+  </script>
 
     </body>
     </html> 

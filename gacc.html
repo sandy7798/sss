@@ -4,61 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="gacc.css">
+    <title>Groom Accecories</title>
+    <link rel="stylesheet" href="short.css">
+    <link rel="shortcut icon" type="image/x-icon" href="mybigday.JPG" />
 </head>
 <body>
       
-  <div class="row">
-    <div class="column">
-      <img src="w1.jpg" alt="Snow" style="width:100%">
-    </div>
-    <div class="column">
-      <img src="w2.jpeg" alt="Forest" style="width:100%">
-    </div>
-   
-  </div>
+    
+<div class="slideshow-container">
 
-
-  <div class="row">
-    <div class="column">
-      <img src="w3.jpg" alt="Mountains" style="width:100%">
+    <div class="mySlides fade">
+      <img src="w1.jpg" style="width:100%">
     </div>
-      <div class="column">
-      <img src="w4.jpg" alt="Mountains" style="width:100%">
+    
+    <div class="mySlides fade">
+      <img src="w2.jpeg" style="width:100%">
     </div>
-  </div>
-
-
- 
-  <div class="row">
-    <div class="column">
-      <img src="i1.jpg" alt="Mountains" style="width:100%">
+    
+    <div class="mySlides fade">
+      <img src="w3.jpg" style="width:100%">
     </div>
-      <div class="column">
-      <img src="i2.jpg" alt="Mountains" style="width:100%">
-    </div>
-  </div>
 
+    <div class="mySlides fade">
+        <img src="w4.jpg" style="width:100%"> 
+      </div>
+
+      <div class="mySlides fade">
+        <img src="i1.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="i2.jpg" style="width:100%">
+      </div>
+      
+      <div class="mySlides fade">
+        <img src="i3.jpg" style="width:100%">
+      </div>
   
-  <div class="row">
-    <div class="column">
-      <img src="i3.jpg" alt="Mountains" style="width:100%">
+      <div class="mySlides fade">
+          <img src="i4.jpg" style="width:100%"> 
+        </div>
+        <div class="mySlides fade">
+          <img src="i5.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides fade">
+            <img src="i6.jpg" style="width:100%"> 
+          </div>
+        
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
     </div>
-      <div class="column">
-      <img src="i4.jpg" alt="Mountains" style="width:100%">
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span> 
     </div>
-  </div>
-
-  
-  <div class="row">
-    <div class="column">
-      <img src="i5.jpg" alt="Mountains" style="width:100%">
-    </div>
-      <div class="column">
-      <img src="i6.jpg" alt="Mountains" style="width:100%">
-    </div>
-  </div>
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
 
 </body>
 </html>

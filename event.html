@@ -4,25 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="event.css">
-    <script src="event.js" defer></script>  
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="event.css">  
+    <script src="home.js" defer></script> 
+    <link rel="shortcut icon" type="image/x-icon" href="mybigday.JPG" />
 </head>
 <body>
 
+  
+  <img src="play.png" id="icon">
+<audio id="mySong">
+<source src="all_of_me.mp3" type="audio/mp3">
+</audio>
+  <img src="top.png" onclick="topFunction()" id="myBtn" title="Go to top">
+
+
+
+
     <div class="header">
         <h1>Events</h1>
-        <p>Make your wedding special</p>
+        <p>Find wedding decorations for your both your ceremony and reception.</p>
       </div>
       
       <div class="navbar">
         <a href="home.html" >Bride Dress</a>
         <a href="groom.html">Groom Suits</a>
-        <a href="acce.html">Accecories</a>
+        <a href="acce.html">Bride Accecories</a>
         <a href="" class="active" >Events</a>
+        <a onclick="openNav()" >Category</a>
+        <a onclick="openSearch()">Search</a>
       </div>
+    
 
-  
+      <div id="myOverlay" class="search">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="search-content">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+     
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+        <a href="photographer.html">Photographer</a>
+    <a href="djs.html">DJs</a>
+    <a href="womensalon.html">Women's Hair Salons</a>
+    <a href="mensalon.html">Men's Hair Salons</a>
+    <a href="nailsalon.html">Nails Saloons</a>
+    <a href="partyplanner.html">Party Planners</a>
+    <a href="groomstore.html">Groom Suits Store</a>
+    <a href="bridalstore.html">Bridal Dresses Store</a>
+    <a href="bridalcos.html">Bridal Cosmetics</a>
+    <a href="cardecoration.html">Car Decoration Store</a>
+    <a href="carrental.html">Car Rental Store</a>
+      </div>
+    </div>
 <!-- MAIN (Center website) -->
 <div class="main">
 
@@ -34,13 +74,17 @@
     <div id="myBtnContainer">
       <button class="btn active" onclick="filterSelection('all')"> Show All</button>
       <button class="btn" onclick="filterSelection('cake')"> Cakes</button>
-      <button class="btn" onclick="filterSelection('decor')"> Decoration</button>
+      <button class="btn" onclick="filterSelection('decor')"> Arch</button>
       <button class="btn" onclick="filterSelection('design')"> Design</button>
+      <button class="btn" onclick="filterSelection('car')"> Decorate Cars</button>
+      <button class="btn" onclick="filterSelection('book')"> Wedding Guest Book</button>
+      <button class="btn" onclick="filterSelection('invitation')"> Wedding Card</button>
       
     </div>
     
     <!-- Portfolio Gallery Grid -->
     <div class="row">
+      
       <div class="column cake">
         <div class="content">
           <img src="c1.jpg" alt="Mountains" style="width:100%">
@@ -115,16 +159,180 @@
               </div>
             </div>
 
-      </div>
+
+            <div class="column car">
+              <div class="content">
+                <img src="p1.jpg" alt="Mountains" style="width:100%">
+           
+              </div>
+            </div>
+            <div class="column car">
+              <div class="content">
+              <img src="p2.jpg" alt="Lights" style="width:100%">
+            
+              </div>
+            </div>
+            <div class="column car">
+              <div class="content">
+              <img src="p3.jpg" alt="Nature" style="width:100%">
+              
+              </div>
+            </div>
+            <div class="column car">
+              <div class="content">
+              <img src="p4.jpg" alt="Nature" style="width:100%">
+             
+              </div>
+            </div>
+          
+
+            <div class="column book">
+              <div class="content">
+                <img src="m1.jpg" alt="Mountains" style="width:100%">
+           
+              </div>
+            </div>
+            <div class="column book">
+              <div class="content">
+              <img src="m2.jpg" alt="Lights" style="width:100%">
+            
+              </div>
+            </div>
+            <div class="column book">
+              <div class="content">
+              <img src="m3.jpg" alt="Nature" style="width:100%">
+              
+              </div>
+            </div>
+            <div class="column book">
+              <div class="content">
+              <img src="m4.jpg" alt="Nature" style="width:100%">
+             
+              </div>
+            </div>
+          
 
 
+            <div class="column invitation">
+              <div class="content">
+                <img src="r1.jpg" alt="Mountains" style="width:100%">
+           
+              </div>
+            </div>
+            <div class="column invitation">
+              <div class="content">
+              <img src="r2.jpg" alt="Lights" style="width:100%">
+            
+              </div>
+            </div>
+            <div class="column invitation">
+              <div class="content">
+              <img src="r3.jpg" alt="Nature" style="width:100%">
+              
+              </div>
+            </div>
+            <div class="column invitation">
+              <div class="content">
+              <img src="r4.jpg" alt="Nature" style="width:100%">
+             
+              </div>
+            </div>
 
-      </div>
+     
     <!-- END GRID -->
     </div>
     
     <!-- END MAIN -->
     </div>
+
+
+
+    
+<footer class="footer-web">
+  <div class="footer-content">
+      <div class="footer-box">
+          <div class="footer-item">
+              <h3>Products</h3>
+              <ul>
+                  <li><a target="_blank" href="/idoc">Mockplus Cloud</a></li>
+                  <li><a target="_blank" href="/download/mockplus-classic">Mockplus Classic</a></li>
+                  <li><a target="_blank" href="/mockplus-ds">Mockplus DS</a></li>
+                  <li><a target="_blank" href="/mockplus-rp">Mockplus RP</a></li>
+                  <li><a href="/enterprise">Mockplus Enterprise</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Use Cases</h3>
+              <ul>
+                  <li><a href="/free-wireframing-tool?hmsr=freewireframingtool" target="_blank">Free wireframe tool</a></li>
+                  <li><a href="/web-prototyping-tool?hmsr=webprototypingtool" target="_blank">Web prototyping</a></li>
+                  <li><a href="/app-prototyping-tool?hmsr=appprototypingtool" target="_blank">APP prototyping</a></li>
+                  <li><a href="/remote-design-collaboration?hmsr=remotedesigncollaboration" target="_blank">Remote collaboration</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Learn</h3>
+              <ul>
+                  <li><a href="https://help.mockplus.com/p/465" target="_blank">Start prototyping</a></li>
+                  <li><a href="https://help.mockplus.com/p/235" target="_blank">Design handoff</a></li>
+                  <li><a href="https://help.mockplus.com/p/247" target="_blank">Integration guide</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Resource</h3>
+              <ul class="contact">
+                  <li><a href="/product/releaseNotes">New releases</a></li>
+                  <li><a href="/features">All features</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/resource">Free materials</a></li>
+                  <li><a href="https://help.mockplus.com/p/96">Samples</a></li>
+              </ul>
+          </div>
+          <div class="footer-item">
+              <h3>Support</h3>
+              <ul>
+                  <li><a href="aboutus.html">About us</a></li>
+                  <li><a href="contactus.html">Contact us</a></li>
+                  
+              </ul>
+          </div>
+          <div class="footer-item">
+              <div class="footer-logo">
+                  <a href="/?home=1">
+                      <i class="iconfont icon_logo"></i>
+                      &nbsp;PHD Group</a>
+              </div>
+              <p><a href="mailto: sandy.muammar@gmail.com" target="_blank">sandy.muammar@gmail.com</a></p>
+              <p class="footer-icon">
+                <span>
+                 <a href="https://www.facebook.com/Mockplus-208416746176601/facebook" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </span>
+                  <span>
+                  <a href="https://twitter.com/Mockplus" target="_blank">
+                    <i class="fa fa-youtube"></i>
+                  </a>
+                </span>
+                <span>
+                  <a href="https://www.linkedin.com/company/mockplus" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </span>
+              </p>
+          </div>
+      </div>
+      <div class="footer-foot">
+          <p class="foot-first">
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/tos">User Agreement</a>
+          </p>
+          <p class="foot-last">© 2014-2021 Mockplus Software Co.,Ltd. All rights reserved.</p>
+      </div>
+  </div>
+</footer>
+
+
   
 <script>
     filterSelection("all")
@@ -170,8 +378,48 @@
         this.className += " active";
       });
     }
-    </script>
-    
+
+
+
+
+   
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
       
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+      
+      icon.onclick= function(){
+      
+      if(mySong.paused){
+      
+        mySong.play();
+       
+        icon.src="pausse.png";
+      }
+      else
+      {
+        mySong.pause();
+        icon.src="play.png";
+      }}
+
+    </script>
+ 
 </body>
 </html>
